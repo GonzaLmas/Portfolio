@@ -1,0 +1,35 @@
+﻿* {
+    background-color: #1a202c;
+    color: whitesmoke;
+    font-family: Corbel;
+}
+
+body .descripcion {
+    font-size: 35px;
+}
+
+footer {
+    text-align: center;
+    font-size: 20px;
+}
+
+#iconGithub {
+    color: whitesmoke;
+    font-size: 27px;
+    margin: 5px;
+}
+
+#iconLinkedin {
+    color: whitesmoke;
+    font-size: 27px;
+    margin: 5px;
+}
+
+#foto {
+    width: 200px;
+    margin: 15px;
+    border-radius: 45%;
+    border: 2px solid black;
+}
+
+
