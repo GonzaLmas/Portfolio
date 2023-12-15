@@ -8,9 +8,20 @@ body .descripcion {
     font-size: 35px;
 }
 
+body {
+    font-weight: lighter;
+}
+
+#navbar {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-weight: normal;
+}
+
 footer {
     text-align: center;
     font-size: 20px;
+    font-weight: bold;
 }
 
 #iconGithub {
@@ -31,5 +42,3 @@ footer {
     border-radius: 45%;
     border: 2px solid black;
 }
-
-
