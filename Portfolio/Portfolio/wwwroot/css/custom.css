@@ -12,6 +12,11 @@ body {
     font-weight: lighter;
 }
 
+    body #textosResumen {
+        font-size: 28px;
+    }
+
+
 #navbar {
     padding-bottom: 20px;
     padding-top: 20px;
@@ -54,3 +59,4 @@ footer {
     margin-left: 10px;
     margin-right: 2px;
 }
+
