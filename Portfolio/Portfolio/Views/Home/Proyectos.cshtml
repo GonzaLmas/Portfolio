@@ -10,9 +10,9 @@
 </div>
 
 <div class="row text-center justify-content-md-center">
-    <div class="col-lg-7 text-center" style="margin-top: 30px" id="tarjetaProyectos">
-        <h1>Artículos Web</h1>
-        <img src="~/images/articulosweb1.png" width="450px" />
+    <div class="col-lg-7 text-center imagen-container" style="margin-top: 30px" id="tarjetaProyectos">
+        <h1>Catálogo de artículos - Web</h1>
+        <img style="cursor: pointer" src="~/images/articulosweb1.png" width="450px" class="imagen" onclick="agrandarImagen(this)" />
         <p style="margin-top:25px">
             Aplicación web que cuenta con un catálogo de productos registrados en una base de datos.
             La pantalla principal muestra los productos en tarjetas, también cuenta con una pantalla que muestra el listado
@@ -21,26 +21,66 @@
             de administrador puede añadir, modificar o eliminar productos del catálogo. La conexión a la base de datos es una
             base de datos relacional trabajada con SQL Server utilizando ADO .NET.
             <i class="bi bi-github" id="iconGithubProyectos"></i>
-            <a href="https://github.com/GonzaLmas/App-Catalogo-Web" target="_blank"style="color:floralwhite">Repositorio del proyecto </a>
+            <a href="https://github.com/GonzaLmas/App-Catalogo-Web" target="_blank" style="color:floralwhite">Repositorio del proyecto </a>
         </p>
     </div>
-    <div class="col-lg-7 text-center" style="margin-top: 70px" id="tarjetaProyectos">
-        <h1>Aplicación de Escritorio</h1>
-        <img style="padding:25px" src="~/images/DesktopApp.png" width="450px" />
-        <p style="margin-top:25px">
+    <div id="imagen-flotante" class="imagen-flotante">
+        <span class="cerrar" onclick="cerrarImagen()">×</span>
+        <img id="imagen-grande" class="imagen-grande">
+    </div>
 
-            <i class="bi bi-github" id="iconGithubProyectos"></i>
-            <a href="https://github.com/GonzaLmas/Ecommerce-Winform" target="_blank" style="color:floralwhite">Repositorio del proyecto </a>
-        </p>
-    </div>
-    <div class="col-lg-7 text-center" style="margin-top: 70px" id="tarjetaProyectos">
+    <div class="col-lg-7 text-center imagen-container" style="margin-top: 70px" id="tarjetaProyectos">
         <h1>Manejo de Presupuestos</h1>
-        <img src="~/images/ManejoPresupuesto.png" width="450px" />
+        <img style="cursor: pointer" src="~/images/ManejoPresupuesto.png" width="450px" class="imagen" onclick="agrandarImagen(this)" />
         <p style="margin-top:25px">
-
+            Aplicación web que permite gestionar las finanzas personales de cada persona con los datos respaldados en una base
+            de datos. Cuenta con varios apartados para mayor control. Se pueden crear distintas categorías dentro de ingresos
+            y gastos. Permite editar y borrar cada ingreso o gasto ya agragado. Cuenta con un sistema de control usuarios.
+            La base de datos está trabajada en SQL Server utilizando el ORM Dapper para el manejo de datos de la aplicación con
+            la base de datos. También se utiliza el mapeo de datos.
             <i class="bi bi-github" id="iconGithubProyectos"></i>
             <a href="https://github.com/GonzaLmas/ManejoPresupuestoMVC-Ejemplo-Dapper" target="_blank" style="color:floralwhite">Repositorio del proyecto </a>
         </p>
     </div>
+    <div id="imagen-flotante" class="imagen-flotante">
+        <span class="cerrar" onclick="cerrarImagen()">×</span>
+        <img id="imagen-grande" class="imagen-grande">
+    </div>
+
+    <div class="col-lg-7 text-center imagen-container" style="margin-top: 70px" id="tarjetaProyectos" >
+        <h1>Control de stock - Aplicación de Escritorio</h1>
+        <img style="padding:25px; cursor: pointer" src="~/images/DesktopApp.png" width="450px" class="imagen" onclick="agrandarImagen(this)"/>
+        <p style="margin-top:25px">
+            Aplicación de escritorio que permite manejar el stock de una tienda que vende dispositivos electrónicos. Es una
+            aplicación realizada en WinForm en la cual aprendí a trabajar con el paradigma orientado a objetos. La aplicación
+            se muestra en una grilla y permite ralizar un CRUD a una base de datos relacional SQL Server. Cuenta con varios
+            filtros para buscar el dispositivo deseado. Cuenta también con la opción de mostrar una imagen por cada producto
+            seleccionado de la grilla para un mayor detalle. La conexión a la base de datos es una base de datos relacional
+            trabajada con SQL Server utilizando ADO .NET.
+            <i class="bi bi-github" id="iconGithubProyectos"></i>
+            <a href="https://github.com/GonzaLmas/Ecommerce-Winform" target="_blank" style="color:floralwhite">Repositorio del proyecto </a>
+        </p>
+    </div>
+    <div id="imagen-flotante" class="imagen-flotante">
+        <span class="cerrar" onclick="cerrarImagen()">×</span>
+        <img id="imagen-grande" class="imagen-grande">
+    </div>
 </div>
+
+@section Scripts {
+    <script>
+        function agrandarImagen(imagen) {
+            var imagenFlotante = document.getElementById('imagen-flotante');
+            var imagenGrande = document.getElementById('imagen-grande');
+
+            imagenFlotante.style.display = 'block';
+            imagenGrande.src = imagen.src;
+        }
+
+        function cerrarImagen() {
+            var imagenFlotante = document.getElementById('imagen-flotante');
+            imagenFlotante.style.display = 'none';
+        }
+    </script>
+}
 

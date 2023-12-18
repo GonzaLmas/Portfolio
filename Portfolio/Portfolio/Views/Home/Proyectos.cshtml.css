@@ -5,3 +5,48 @@
 #textosProyecto h2 {
     margin-bottom: 100px;
 }
+
+#tarjetaProyectos{
+    font-size: 20px;
+}
+
+.imagen-container {
+    position: relative;
+}
+
+.imagen {
+    width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+}
+
+.imagen-flotante {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.imagen-grande {
+    width: 80%;
+    height: auto;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333; /* Cambia el color del texto según tus preferencias */
+    background-color: whitesmoke; /* Cambia el color de fondo del botón */
+    border: 1px solid red; /* Añade un borde al botón */
+    padding: 5px 10px; /* Ajusta el espaciado interno del botón */
+    border-radius: 5px; /* Añade esquinas redondeadas al botón */
+}
+
+    .cerrar:hover {
+        background-color: red; /* Cambia el color de fondo cuando el cursor está sobre el botón */
+    }
