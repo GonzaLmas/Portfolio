@@ -60,3 +60,9 @@ footer {
     margin-right: 2px;
 }
 
+#tarjetaResumen {
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+    padding: 15px;
+}
+
